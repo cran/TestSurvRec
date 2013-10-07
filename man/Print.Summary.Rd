@@ -1,26 +1,13 @@
 \name{Print.Summary}
 \alias{Print.Summary}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{Function to print summary of statistics tests to comparison of the survival curves of the groups with recurrent events
-%%  ~~function to do ... ~~
-}
-\description{Returns various matrix that containing the survival curves of both groups and the values of the statistic of tests of this package. Too, returns
-the plots of the curves of survival of both groups using PSH estimator.
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Function to print summary of statistics tests to comparison of the survival curves of the groups with recurrent events}
+\description{Returns matrices that contain the estimations of the survival curves for both groups. The estimations of survival curves of both groups are made using PSH estimator. The p.values of the tests are returned.}
 \usage{Print.Summary(XX)}
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{XX}{Object type recurrent events data
-%%     ~~Describe \code{XX} here~~
-}
-}
+  \item{XX}{Object type recurrent events data}}
 \details{See Dif.Surv.Rec(XX,...)
-%%  ~~ If necessary, more details than the description above ~~
-}
+ }
 \value{Put object type recurrent events data. 
-#Print.Summary(TBCplapyr). #Values returned:
-
       Group= 0
 \tabular{lllll}{
  time \tab  n.event\tab  n.risk\tab   surv\tab std.error\cr
@@ -33,7 +20,7 @@ the plots of the curves of survival of both groups using PSH estimator.
    29 \tab        1\tab      18\tab  0.244\tab    0.0422\cr
    31 \tab        1\tab      13\tab  0.225\tab    0.0427\cr
    35 \tab        1\tab       9\tab  0.200\tab    0.0439\cr
-}
+ }
       Group= 1
 \tabular{lllll}{
   time\tab n.event\tab n.risk\tab  surv\tab std.error\cr
@@ -46,14 +33,14 @@ the plots of the curves of survival of both groups using PSH estimator.
     15\tab       1\tab     17\tab 0.283\tab    0.0514\cr
     42\tab       1\tab      6\tab 0.236\tab    0.0582\cr
     44\tab       1\tab      5\tab 0.189\tab    0.0599\cr
-}
+ }
           Group Median
 \tabular{ll}{
         Group\tab Median\cr
  Pooled Group\tab      8\cr
     1er Group\tab      9\cr
     2do Group\tab      6\cr
-}
+ }
 \tabular{lll}{
  Nomb.Est\tab  Chi.square\tab   p.value\cr
  LRrec   \tab  0.3052411 \tab 0.5806152\cr
@@ -66,23 +53,13 @@ the plots of the curves of survival of both groups using PSH estimator.
  CMrec   \tab  0.3052411 \tab 0.5806152\cr
  Mrec    \tab  1.5298763 \tab 0.2161310\cr
  }
-}
+ }
 \references{\bold{Martínez C., Ramírez, G., Vásquez M. }(\bold{2009}).Pruebas no paramétricas para comparar curvas de supervivencia de dos grupos que experimentan eventos recurrentes. Propuestas. \emph{Revista Ingeniería U.C.},Vol 16, 3, 45-55.
-
-	\bold{Peña E., Strawderman R., Hollander, M.} (\bold{2001}). Nonparametric Estimation with Recurrent
-  Event Data. \emph{J.A.S.A.} 96, 1299-1315.
-%% ~put references to the literature/web site here ~
-}
-\author{Dr. \bold{Carlos Martínez} <cmmm7031@gmail.com>
-%%  ~~who you are~~
-}
-\seealso{Dif.Surv.Rec, Plot.Surv.Rec
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
+\bold{Peña E., Strawderman R., Hollander, M.} (\bold{2001}). Nonparametric Estimation with Recurrent Event Data. \emph{J.A.S.A.} 96, 1299-1315.}
+\author{Dr. \bold{Carlos Martinez} <cmmm7031@gmail.com>}
+\seealso{Dif.Surv.Rec,Plot.Surv.Rec}
 \examples{data(TBCplapyr)
-Print.Summary(TBCplapyr)
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+ Print.Summary(TBCplapyr)}
 \keyword{ Plot }
-\keyword{ Survival }% __ONLY ONE__ keyword per line
+\keyword{ Survival }
+

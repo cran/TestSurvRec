@@ -1,7 +1,8 @@
 Plot.Event.Rec <-
-function (yy, xy=1,xf=1) {
- XL <- data.frame(yy)
-    fit1 <- survfitr(Survr(id, time, event) ~ as.factor(group), 
+function (yy, xy = 1, xf = 1) {
+
+    XL <- data.frame(yy)
+    fit1 <-survfitr(Survr(id, time, event) ~ as.factor(group), 
         data = XL, type = "pe")
     y <- survfitr(Survr(id, time, event) ~ 1, data = XL, type = "pe")
     failed <- matrix(y$failed)
@@ -14,8 +15,8 @@ function (yy, xy=1,xf=1) {
     mm <- 0
     m <- 0
     nn <- 0
-    xf<-xf
-        for (z in 1:xf) {
+    xf <- xf
+    for (z in 1:xf) {
         nom <- as.character(paste("Unit = ", z, "\n"))
         m <- k[z, 1]
         nn <- mm + 1
@@ -42,9 +43,7 @@ function (yy, xy=1,xf=1) {
         }
         rx <- max(tiempocalendario1[1:(m + 2), 1])
         ry <- max(failed[nn:(nn + m - 1), 1], censored[z, 1])
-        #X11()
-        plot(0:1 * rx, 0:1 * ry, xlab = "Calendar time", 
-               ylab = "Gap time")
+        plot(0:1 * rx, 0:1 * ry, xlab = "Calendar time", ylab = "Gap time")
         title(main = nom)
         abline(h = 0, col = gray(0.9))
         abline(v = tiempocalendario1[(m + 2), 1], col = gray(0.9))
